@@ -24,7 +24,7 @@ function Buttons() {
       {btns.map((name, key) => (
         <button
           key={key}
-          className="text-black p-2 bg-white rounded-md hover:shadow hover:shadow-slate-50 hover:bg-gray-300 transition-all ease-in-out duration-200 text-sm md:text-base"
+          className="text-black p-2 bg-white rounded-md hover:shadow hover:shadow-slate-50 hover:bg-gray-300 transition-all ease-in-out duration-200 text-sm md:text-base font-heading"
           onClick={fnc[key]}
         >
           {name}

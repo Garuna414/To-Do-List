@@ -34,7 +34,7 @@ function Task({ name, index }) {
   };
 
   return (
-    <div className="bg-white border border-black rounded-md shadow-md shadow-slate-400 flex flex-row justify-between md:text-base text-sm">
+    <div className="bg-white border border-black rounded-md shadow-md shadow-slate-400 flex flex-row justify-between md:text-base text-sm font-body">
       <div className="w-[60%] py-1 flex-nowrap overflow-x-hidden flex flex-row">
         <p className="mx-3">{index+1}.</p>
         <p className="">{name}</p>
