@@ -35,8 +35,10 @@ function Task({ name, index }) {
 
   return (
     <div className="bg-white border border-black rounded-md shadow-md shadow-slate-400 flex flex-row justify-between md:text-base text-sm font-body">
-      <div className="w-[60%] py-1 flex-nowrap overflow-x-hidden flex flex-row">
-        <p className="mx-3">{index+1}.</p>
+      <div className="py-1 w-[50px]">
+        <p className="mx-3">{index + 1}.</p>
+      </div>
+      <div className="w-[80%] py-1 flex-nowrap overflow-x-hidden flex flex-row">
         <p className="">{name}</p>
       </div>
       <div className="flex flex-row w-[50%] md:max-w-[110px] max-w-[100px] items-center">
@@ -68,12 +70,12 @@ function Task({ name, index }) {
           onClick={() => toggle()}
         ></div>
         <div className="bg-cyan-300 max-h-[300px] max-w-[300px] h-[40vh] w-[75vw] rounded-md z-20 p-5 flex flex-col gap-7">
-            <div className="w-full">
-                <p>Old Task</p>
-                <p>{name}</p>
-            </div>
           <div className="w-full">
-            <p className="pb-2">New name</p>
+            <p>Old Task</p>
+            <p>{name}</p>
+          </div>
+          <div className="w-full">
+            <p className="pb-2">New Task</p>
             <textarea
               name="newName"
               id="newName"
