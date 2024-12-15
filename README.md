@@ -105,7 +105,25 @@ cd To-Do-List
    ```bash
    pip install pytest
    ```
-2. Run the tests:
+2. Create a virtual environment:
+
+   ```bash
+   python -m venv venv
+   ```
+
+3. Activate the virtual environment:
+
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. Run the tests:
+
    ```bash
    pytest
    ```
@@ -162,8 +180,4 @@ The base URL for the API is: `https://to-do-list-u0jh.onrender.com`
 Feel free to contribute to this project by submitting issues or pull requests.
 
 ---
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
