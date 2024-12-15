@@ -1,17 +1,18 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import UpdateModal from "../components/UpdateModal";
 
 export const TasksContext = createContext();
 
 export const TasksProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
+  const [modalData, setModalData] = useState([{}]);
 
   // Update menu toggler
   const [visible, setVisible] = useState(false);
   const toggle = () => {
     setVisible(!visible);
   };
-
 
   const apiUrl = "http://localhost:5000/tasks";
 
@@ -24,7 +25,6 @@ export const TasksProvider = ({ children }) => {
   const fetchTasks = async () => {
     try {
       const response = await axios.get(apiUrl);
-      console.log(response);
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -61,7 +61,6 @@ export const TasksProvider = ({ children }) => {
     }
   };
 
-
   // Updating one task endpoint
   const updateTask = async (id, updatedName) => {
     try {
@@ -86,7 +85,9 @@ export const TasksProvider = ({ children }) => {
         updateTask,
         fetchTasks,
         visible,
-        toggle
+        toggle,
+        modalData,
+        setModalData,
       }}
     >
       {children}

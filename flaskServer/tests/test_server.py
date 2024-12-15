@@ -1,13 +1,10 @@
 import sys
 import os
-
-# Add the parent directory to the module search path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import pytest
-from server import app  # Import your Flask app
+from server import app
 
-# Fixture to create a test client
 @pytest.fixture
 def client():
     app.config["TESTING"] = True

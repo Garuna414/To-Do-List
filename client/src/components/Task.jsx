@@ -3,8 +3,18 @@ import { TasksContext } from "../hooks/TaskContext";
 import UpdateModal from "./UpdateModal";
 
 function Task({ name, id, index }) {
-  const { deleteTask, toggle } = useContext(TasksContext);
-  console.log("id", id);
+  const {
+    deleteTask,
+    toggle,
+    setModalData,
+    modalData,
+  } = useContext(TasksContext);
+
+  const toggleModal = ({ name, id, index }) => {
+    toggle();
+    setModalData({ name, id, index });
+    console.log(modalData);
+  };
 
   return (
     <div className="bg-white border border-black rounded-md shadow-md shadow-slate-400 flex flex-row justify-between md:text-base text-sm font-body">
@@ -18,7 +28,7 @@ function Task({ name, id, index }) {
         <div className="max-w-[55px] h-full">
           <button
             className="hover:bg-slate-200 py-1 px-[10px]"
-            onClick={() => toggle()}
+            onClick={() => toggleModal({ name, id, index })}
           >
             Edit
           </button>
@@ -32,7 +42,6 @@ function Task({ name, id, index }) {
           </button>
         </div>
       </div>
-      <UpdateModal name={name} id={id}/>
     </div>
   );
 }
