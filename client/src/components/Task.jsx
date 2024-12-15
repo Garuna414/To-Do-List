@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { TasksContext } from "../hooks/TaskContext";
-import UpdateModal from "./UpdateModal";
 
 function Task({ name, id, index }) {
   const {
