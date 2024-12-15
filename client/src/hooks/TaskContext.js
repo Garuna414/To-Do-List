@@ -14,7 +14,7 @@ export const TasksProvider = ({ children }) => {
     setVisible(!visible);
   };
 
-  const apiUrl = "http://localhost:5000/tasks";
+  const apiUrl = "https://to-do-list-u0jh.onrender.com/tasks";
 
   // Fetch all tasks on component mount
   useEffect(() => {
