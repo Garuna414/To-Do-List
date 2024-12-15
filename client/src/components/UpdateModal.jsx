@@ -28,7 +28,7 @@ function UpdateModal() {
       }`}
     >
       <div
-        className="absolute top-0 right-0 h-[100vh] w-[100vw] z-10"
+        className="absolute top-0 right-0 h-[100vh] w-[100vw] z-10 bg-black opacity-30"
         onClick={() => toggle()}
       ></div>
       <div className="bg-cyan-300 max-h-[300px] max-w-[300px] h-[40vh] w-[75vw] rounded-md z-20 p-5 flex flex-col gap-7">

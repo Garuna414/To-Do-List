@@ -12,7 +12,6 @@ function Task({ name, id, index }) {
   const toggleModal = ({ name, id, index }) => {
     toggle();
     setModalData({ name, id, index });
-    console.log(modalData);
   };
 
   return (
