@@ -101,17 +101,13 @@ cd To-Do-List
 
 ### Backend Tests
 
-1. Install `pytest` if not already installed:
-   ```bash
-   pip install pytest
-   ```
-2. Create a virtual environment:
+1. Create a virtual environment:
 
    ```bash
    python -m venv venv
    ```
 
-3. Activate the virtual environment:
+2. Activate the virtual environment:
 
    - On Windows:
      ```bash
@@ -121,6 +117,11 @@ cd To-Do-List
      ```bash
      source venv/bin/activate
      ```
+
+3. Install `pytest` if not already installed:
+   ```bash
+   pip install pytest
+   ```
 
 4. Run the tests:
 
