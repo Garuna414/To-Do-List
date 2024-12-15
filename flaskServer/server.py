@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 CORS(app)
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://Garuna414:mQSh0MtUjqc4UOG6@cluster0.i6mi4.mongodb.net/")
 db = client["taskdb"]
 tasks_collection = db["tasks"]
 
