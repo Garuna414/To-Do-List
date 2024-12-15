@@ -2,22 +2,8 @@ import React, { useContext } from "react";
 import { TasksContext } from "../hooks/TaskContext";
 function Buttons() {
   const btns = ["NEW TASK", "DELETE ALL"];
-  const { tasks, setTasks } = useContext(TasksContext);
-
-  const updateDb = () => {
-    console.log("Updating database");
-  };
-
-  const addOne = () => {
-    setTasks([...tasks, "New Task"]);
-    updateDb();
-  };
-
-  const delAll = () => {
-    setTasks([]);
-    updateDb();
-  };
-  const fnc = [addOne, delAll];
+  const { createTask, deleteAllTasks } = useContext(TasksContext);
+  const fnc = [createTask, deleteAllTasks];
 
   return (
     <div className="flex flex-row gap-5 p-5">
